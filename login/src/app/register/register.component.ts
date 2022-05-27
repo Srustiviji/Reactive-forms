@@ -15,7 +15,7 @@ export class RegisterComponent implements OnInit {
       "firstName":new FormControl(null,[Validators.required,Validators.pattern('[a-zA-Z]*')]),
       "lastName":new FormControl(null,[Validators.required,Validators.pattern('[a-zA-Z]*')]),
       "emailid":new FormControl(null,[Validators.required,Validators.email]),
-      "phonenumber":new FormControl(null,[Validators.required,Validators.pattern('[0-9]')])
+      "phonenumber":new FormControl(null,[Validators.required,Validators.pattern('[0-9]*')])
     })
   }
   submitData()
