@@ -1,0 +1,20 @@
+.content
+{
+    max-width: 500px;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 2% 2%;
+}
+
+button{
+    background-color: cornflowerblue;
+    color: #fff;
+
+
+}
+button:hover{
+    color: blue;
+}
+.error{
+    color: red;
+}

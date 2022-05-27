@@ -1,0 +1,46 @@
+<div class="container  mt-5">
+
+
+
+
+    <form  class="content" [formGroup]="registerForm" (ngSubmit)="submitData()">
+        <h2 class="text-center">Register Form</h2>
+        <div class="row">
+         <div class=" mt-2 mb-2 col-lg-12 col-12">
+             <input type="text"  formControlName="firstName" class="form-control" placeholder="FirstName">
+         </div>
+
+         <div *ngIf="firstname.invalid && firstname.touched ||firstname.dirty">
+             <span class="error" *ngIf=firstname.errors?.required>* Firstname is required</span>
+             <span class="error" *ngIf=firstname.errors?.pattern>* Enter only characters</span>
+         </div>
+
+         <div class=" mt-2 mb-2 col-lg-12 col-12">
+            <input type="text"   formControlName="lastName" class="form-control" placeholder="LastName">
+            <div *ngIf="lastname.invalid && lastname.touched ||lastname.dirty">
+                <span class="error" *ngIf=lastname.errors?.required>* lastname is required</span>
+                <span class="error" *ngIf=lastname.errors?.pattern>* Enter only characters</span>
+            </div>
+        </div>
+       
+        <div class="mt-2 mb-2 col-lg-12 col-12">
+            <input type="text" formControlName="emailid"  class="form-control" placeholder="email id">
+
+            <div *ngIf="emailid.invalid && emailid.touched ||emailid.dirty">
+                <span class="error" *ngIf=emailid.errors?.required>*email id is required</span>
+                <span class="error" *ngIf=emailid.errors?.pattern>* enter a valid id</span>
+            </div>
+        </div>
+        <div class="mt-2 mb-2 col-lg-12 col-12">
+            <input type="text"  formControlName="phonenumber" class="form-control" placeholder="phone number">
+            <div *ngIf="phonenumber.invalid && phonenumber.touched ||phonenumber.dirty">
+                <span class="error" *ngIf=phonenumber.errors?.required>*phone number  is required</span>
+                <span class="error" *ngIf=phonenumber.errors?.pattern>* enter only numbers</span>
+            </div>
+        </div>
+        <div class="mt-2 mb-2 col-lg-12 col-12">
+            <button class="btn">Submit</button>
+        </div>
+    </div>
+    </form>
+</div>
