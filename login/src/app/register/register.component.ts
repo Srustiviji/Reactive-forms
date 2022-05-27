@@ -21,6 +21,13 @@ export class RegisterComponent implements OnInit {
   submitData()
 
   {console.log(this.registerForm.value);
+
+      if (this.registerForm.valid){
+        alert(`THANK YOU ${this.registerForm.value.firstName} `);
+      }
+
+
+
   }
   get firstname() {return this.registerForm.get('firstName')};
   get lastname() {return this.registerForm.get('lastName')};
